@@ -9,7 +9,11 @@ pigeon_color = data[:color]
 pigeon_color.each {|color_pair|
   color = color_pair[0]
 data[:color][color].each {|name|
+  p final[name][:color]
+  if final[name][:color].nil?
 final[name][:color] = [color.to_s]
+else final[name][:color] += [color.to_s]
+end
 }
 }
 pigeon_gender = data[:gender]
