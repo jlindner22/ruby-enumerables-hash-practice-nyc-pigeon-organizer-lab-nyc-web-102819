@@ -23,14 +23,9 @@ gender = gender_pair[0]
 data[:gender][gender].each {|name|
 final[name][:gender] = [gender]
 }
-
 }
 }
 }
-}
-}
-}
-
  final
     
 end
