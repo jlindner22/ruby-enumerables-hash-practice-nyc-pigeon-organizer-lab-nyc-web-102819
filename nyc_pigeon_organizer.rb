@@ -16,7 +16,17 @@ pigeon_location.each {|location_pair|
   location = location_pair[0]
   data[:lives][location].each {|name|
   final[name][:lives] = [location]
-p location
+}
+pigeon_gender = data[:gender]
+pigeon_gender.each {|gender_pair|
+gender = gender_pair[0]
+data[:gender][gender].each {|name|
+final[name][:gender] = [gender]
+}
+
+}
+}
+}
 }
 }
 }
