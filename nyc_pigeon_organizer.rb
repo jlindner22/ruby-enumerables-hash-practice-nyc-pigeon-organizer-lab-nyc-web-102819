@@ -21,7 +21,7 @@ p location
 }
 }
 
-puts final
+ final
     
 end
 
