@@ -9,7 +9,15 @@ pigeon_color = data[:color]
 pigeon_color.each {|color_pair|
   color = color_pair[0]
 data[:color][color].each {|name|
-final[name][:color] = [color]
+final[name][:color] = [color.to_s]
+}
+}
+pigeon_gender = data[:gender]
+pigeon_gender.each {|gender_pair|
+gender = gender_pair[0]
+data[:gender][gender].each {|name|
+final[name][:gender] = [gender.to_s]
+}
 }
 pigeon_location = data[:lives]
 pigeon_location.each {|location_pair|
@@ -17,17 +25,9 @@ pigeon_location.each {|location_pair|
   data[:lives][location].each {|name|
   final[name][:lives] = [location]
 }
-pigeon_gender = data[:gender]
-pigeon_gender.each {|gender_pair|
-gender = gender_pair[0]
-data[:gender][gender].each {|name|
-final[name][:gender] = [gender]
 }
-}
-}
-}
- final
-    
+p final
+final
 end
 
 #for each pigeon, list their name > color, gender, lives in an array (key)
